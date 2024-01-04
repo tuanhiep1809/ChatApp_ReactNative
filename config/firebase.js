@@ -8,17 +8,17 @@ import Constans from "expo-constants";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: Constans.manifest.extra.apiKey ,
-  authDomain: Constans.manifest.extra.authDomain ,
-  projectId: Constans.manifest.extra.projectId ,
-  storageBucket: Constans.manifest.extra.storageBucket ,
-  messagingSenderId: Constans.manifest.extra.messagingSenderId ,
-  appId: Constans.manifest.extra.appId , 
-  databaseURL: Constans.manifest.extra.databaseURL 
+  apiKey: "AIzaSyBFvgvx0lKh7uWk4RU9VDYUYKUIT3R214A",
+  authDomain: "chatapp-572fc.firebaseapp.com",
+  projectId: "chatapp-572fc",
+  storageBucket: "chatapp-572fc.appspot.com",
+  messagingSenderId: "1046800509907",
+  appId: "1:1046800509907:web:da748878a3c0a14fb69d26"
 };
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-initializeApp(firebaseConfig);
-export const auth = getAuth();
+const app = initializeApp(firebaseConfig);
+// initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
 export const database = getFirestore();
